@@ -206,6 +206,8 @@ input "type:touchpad" {
 
 include /etc/sway/config.d/*
 
+# CUSTOM
+
 # Autostart
 exec ~/scripts/launch.sh
 exec nm-applet &
@@ -222,3 +224,6 @@ bindsym xf86audiolowervolume exec amixer -D pulse sset Master 5%-
 bindsym xf86audiomute exec amixer -D pulse sset Master toggle
 bindsym xf86monbrightnessup exec brightnessctl -s set 10%+
 bindsym xf86monbrightnessdown exec brightnessctl -s set 10%-
+
+#screenshot
+bindsym $mod+Shift+o exec hyprshot -m region --clipboard-only
