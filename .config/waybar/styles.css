@@ -1,13 +1,14 @@
 * {
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-family: JetBrains Mono NF, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 800;
 }
 
 window#waybar {
-    background-color: rgba(49,43,73,0.80);
+  /* background-image: url("/home/namlev//Pictures/wallpapers/w1-blur.jpg"); */
+    background-color: rgba(1, 1, 1, 0);
     color: #ced4f3;
-    border-radius: 90px;
-    padding: 20px 8px;
+    padding: 30px 18px 20px 18px;
 }
 
 button {
@@ -53,33 +54,65 @@ button:hover {
     background-color: #eb4d4b;
 }
 
+#custom-arch,
+#media_group,
+#tray_batt,
 #workspaces,
-#updates,
 #language,
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
+#time,
 #backlight,
-#network,
 #pulseaudio,
 #wireplumber,
 #custom-media,
-#tray,
 #mode,
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    padding: 0 10px;
+    padding: 2px 14px;
     color: #ced4f3;
     border-radius: 9999px;
-    background-color: #1a1b2a;
+    background-color: #23283B;
 }
 
 #window,
 #workspaces {
     margin: 0 4px;
+}
+
+#custom-arch {
+  color: #3AD8DB;
+}
+
+#hardware {
+  color: #9C1F8A;
+    padding: 2px 14px;
+    border-radius: 9999px;
+    background-color: #23283B;
+}
+
+#cpu,
+#memory,
+#temperature {
+  color: #CB9BBB;
+}
+
+#media_group {
+  color: #D9B2D5;
+}
+
+#custom-clock_icon {
+  color: #9DB650;
+}
+
+#clock {
+  color: #C1D8C7;
+}
+
+#custom-updates{
+  color: #D5B55E;
+}
+
+#battery{
+  color: #B6C8C4;
 }

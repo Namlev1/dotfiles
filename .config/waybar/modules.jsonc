@@ -1,6 +1,6 @@
 {
     "custom/updates": {
-        "format": "   {}",
+        "format": "<span color='#F9BA27'>󰮯</span> {}",
         "escape": true,
         "return-type": "json",       
         "exec": "~/scripts/updates.sh",
@@ -11,42 +11,80 @@
     "group/hardware": {
       "orientation": "inherit",
         "modules": [
-            "disk",
+            "custom/cpu_icon",
             "cpu",
-            "memory"
+            "custom/memory_icon",
+            "memory",
+            "custom/temperature_icon",
+            "temperature"
         ]
     },
 
+    "custom/cpu_icon": {
+      "format": " "
+    },
     "cpu": {
         "interval": 2,
-        "format": "C {usage}%",
+        "format": "{usage}%",
         "tooltip": false
     },
-    "disk": {
-        "interval": 30,
-      "format": "D {percentage_used}%"
+
+    "custom/memory_icon": {
+      "format": " 󰾆 "
     },
     "memory": {
         "interval": 10,
-        "format": "M {}%"
+        "format": "{}%"
+    },
+
+    "custom/temperature_icon": {
+      "format": " "
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": " {temperatureC}°C"
+    },
+
+    "group/time": {
+      "orientation": "inherit",
+        "modules": [
+            "custom/clock_icon",
+            "clock"
+        ]
+    },
+
+    "custom/clock_icon": {
+      "format": "  "
     },
     "clock": {
-        // "timezone": "America/New_York",
+        "interval": 60,
+        "format": "{:%H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "on-click": "zenity --calendar"
     },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+
+    "group/media_group": {
+      "orientation": "inherit",
+        "modules": [
+            "backlight",
+            "network",
+            "pulseaudio",
+            "custom/updates"
+        ]
     },
+    
         "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
+        "format": "<span color='#FF00B1'>{icon}</span> <span color='#D9B2D5'>{percent}%</span>",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+
+    "group/tray_batt": {
+      "orientation": "inherit",
+        "modules": [
+            "tray",
+            "battery"
+        ]
+
     },
     "battery": {
         "states": {
@@ -54,24 +92,22 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
+        "format": " <span color='#BDF700'>{icon}</span>  {capacity}% ",
         "format-full": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "battery#bat2": {
         "bat": "BAT2"
     },
         "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "<span color='#FF00B1'></span>  {signalStrength}%",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-disconnected": "󰖪  0%",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "sway/workspaces": {
@@ -81,7 +117,7 @@
        }
     },
     "pulseaudio": {
-        "format": "{volume}% {icon}",
+        "format": "<span color='#FF00B1'>{icon}</span> {volume}%",
         "format-bluetooth": "{volume}% {icon}",
         "format-bluetooth-muted": " {icon}",
         "format-muted": "{volume}%  ",
@@ -97,7 +133,14 @@
         "on-click": "pavucontrol"
     },
     "tray": {
-    "icon-size": 21,
-    "spacing": 10
-}
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "custom/arch": {
+        "format": "󰣇  Arch"
+    },
+
+    "sway/language": {
+      "format": "<span color='#8A9DFE'></span>  {long}"
+    }
 }

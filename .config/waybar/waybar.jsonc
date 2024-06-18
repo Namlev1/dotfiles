@@ -1,23 +1,19 @@
 {
     "height": 1, // Waybar height (to be removed for auto height)
-    "margin": "10 10 0 10",
-    "spacing": 4, // Gaps between modules (4px)
+    "margin": "10 0 0 0",
+    "spacing": 16, // Gaps between modules (4px)
     "include": ["~/.config/waybar/modules.jsonc"],
     "modules-left": [
-        "sway/workspaces",
+        "custom/arch",
+        "group/hardware",
+        "group/time",
         "sway/language"
     ],
     "modules-center": [
-      "group/hardware"
+        "sway/workspaces"
     ],
     "modules-right": [
-        "custom/updates",
-        "pulseaudio",
-        "tray",
-        "temperature",
-        "backlight",
-        "battery",
-        "battery#bat2",
-        "clock"
+        "group/media_group",
+        "group/tray_batt"
     ]
 }
