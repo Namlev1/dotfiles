@@ -137,3 +137,6 @@ export NVM_DIR="$HOME/.nvm"
 export JAVA_HOME="/usr/lib/jvm/java-22-openjdk/"
 
 eval "$(zoxide init --cmd cd zsh)"
+
+# Created by `pipx` on 2024-06-18 08:56:49
+export PATH="$PATH:/home/namlev/.local/bin"
