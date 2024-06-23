@@ -1,0 +1,10 @@
+{
+    "layer": "top",
+    "margin": "10 10 0 10",
+    "modules-left": ["custom/arch", "group/hardware", "clock", "sway/language"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["group/media_group", "group/tray_batt"],
+	   "include": [
+	"~/.config/waybar/modules.jsonc"
+	   ]
+}

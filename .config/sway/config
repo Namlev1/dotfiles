@@ -239,9 +239,9 @@ default_border pixel 4
 exec swaybg -i ~/Pictures/wallpapers/w1.jpg
 
 # media buttons
-bindsym xf86audioraisevolume exec amixer -D pulse sset Master 5%+
-bindsym xf86audiolowervolume exec amixer -D pulse sset Master 5%-
-bindsym xf86audiomute exec amixer -D pulse sset Master toggle
+bindsym xf86audioraisevolume exec pamixer -i 5
+bindsym xf86audiolowervolume exec pamixer -d 5
+bindsym xf86audiomute exec pamixer --toggle-mute
 bindsym xf86monbrightnessup exec brightnessctl -s set 10%+
 bindsym xf86monbrightnessdown exec brightnessctl -s set 10%-
 
