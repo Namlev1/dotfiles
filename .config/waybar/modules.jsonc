@@ -38,7 +38,8 @@
     },
 
     "clock": {
-	    "format": "<span color='#859E38'>  </span>{:%H:%M}"
+	    "format": "<span color='#859E38'>  </span>{:%H:%M}",
+	    "on-click": "zenity --calendar"
     },
 
     "sway/language": {

@@ -227,8 +227,9 @@ include /etc/sway/config.d/*
 # CUSTOM
 
 # Autostart
+exec systemctl start opentabletdriver --user
 exec_always ~/scripts/launch.sh
-exec megasync
+exec mega-sync
 exec nm-applet &
 exec blueman-applet &
 exec layman
