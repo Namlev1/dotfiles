@@ -20,7 +20,7 @@ set $term alacritty
 # on the original workspace that the command was run on.
 set $menu rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
 set $browser vivaldi
-set $fileManager dolphin
+set $fileManager thunar
 
 ### Output configuration
 #
@@ -233,6 +233,7 @@ exec mega-sync
 exec nm-applet &
 exec blueman-applet &
 exec layman
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 gaps inner 10
 default_border pixel 4
