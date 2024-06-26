@@ -1,0 +1,128 @@
+{
+    "sway/workspaces": {
+    "persistent-workspaces": {
+        "1": ["HDMI-A-1"],
+        "2": ["HDMI-A-1"],
+        "3": ["HDMI-A-1"],
+        "4": ["HDMI-A-1"],
+        "5": ["HDMI-A-1"],
+        "6": ["eDP-1"],
+        "7": ["eDP-1"],
+        "8": ["eDP-1"],
+        "9": ["eDP-1"],
+        "10": ["eDP-1"]
+    }
+},
+    "custom/arch": {
+	"format": "󰣇 Arch"
+    },
+
+    "group/hardware": {
+	    "orientation": "inherit",
+	    "modules": [
+		    "cpu",
+		    "memory",
+		    "temperature"
+	    ]
+    },
+    "cpu": {
+        "format": "<span color='#A21283'> </span> {usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "<span color='#A21283'>󰾆 </span>{}% "
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "<span color='#A21283'> </span>{temperatureC}°C "
+    },
+
+    "clock": {
+	    "format": "<span color='#859E38'>  </span>{:%H:%M}",
+	    "on-click": "zenity --calendar"
+    },
+
+    "sway/language": {
+    "format": "<span color='#8A9DFE'>  </span>{long}"
+    },
+
+    "group/media_group": {
+	    "orientation": "inherit",
+	    "modules": [
+		    "backlight",
+		    "network",
+		    "pulseaudio",
+		    "custom/updates"
+	    ]
+    },
+    "backlight": {
+        "format": "<span color='#A21283'>{icon} </span>{percent}% ",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "network": {
+        "format-wifi": "<span color='#A21283'>  </span>{signalStrength}% ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "format": "<span color='#A21283'>{icon}</span>  {volume}%",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": "<span color='#A21283'></span>  {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+
+
+    "group/tray_batt": {
+	    "orientation": "inherit",
+	    "modules": [
+		    "tray",
+		    "battery"
+	    ]
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "<span color='#C3FF00'>{icon}</span>  {capacity}%",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "<span color='#C3FF00'></span> {capacity}%",
+        "format-plugged": "<span color='#C3FF00'></span> {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+        "custom/updates": {
+        "format": "<span color='#F8BA31'>󰮯</span> {}",
+        "escape": true,
+        "return-type": "json",       
+        "exec": "~/dotfiles/scripts/updates.sh",
+        "restart-interval": 60,
+        "on-click": "alacritty --class dotfiles-floating -e ~/dotfiles/scripts/installupdates.sh",
+        "on-click-right": "~/dotfiles/.settings/software.sh"
+    }
+
+    }
+}
