@@ -61,14 +61,14 @@
     },
     "network": {
         "format-wifi": "<span color='#A21283'>  </span>{signalStrength}% ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-ethernet": "<span color='#A21283'>󰛳</span> {ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        "format": "<span color='#A21283'>{icon}</span>  {volume}%",
+        "format": "<span color='#A21283'>{icon}</span>  {volume}% ",
         "format-bluetooth": "{volume}% {icon}",
         "format-bluetooth-muted": " {icon}",
         "format-muted": "<span color='#A21283'></span>  {volume}%",
