@@ -20,27 +20,22 @@ button:hover {
 }
 
 #workspaces button {
-    border: none;
-}
-
-#workspaces button.persistent.empty{
-  color: rgba(49,43,73,0.80);
-}
-
-#workspaces button.focused {
-  color: #f6e2b7;
-}
-
-#workspaces button.persistent.focused {
-  color: #f6e2b7;
-}
-
-#workspaces button.default {
-  color: blue;
+    color: rgba(246, 226, 183, 0.6);
+    padding-bottom: 2px;
 }
 
 #workspaces button.urgent {
     background-color: #eb4d4b;
+}
+
+#workspaces button.empty{
+  color: rgba(246, 226, 183, 0);
+}
+
+#workspaces button.focused {
+  color: #f6e2b7;
+  border-bottom: 2px solid #f6e2b7;
+  padding-bottom: 0;
 }
 
 #custom-arch,
