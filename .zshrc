@@ -15,6 +15,7 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-history-substring-search
 
 # Add in snippets
 zinit snippet OMZP::git
@@ -40,11 +41,16 @@ setopt hist_find_no_dups
 
 # Aliases
 alias l='ls --color'
+alias la='ls -la --color'
 alias v='nvim'
 alias c='clear'
 
 # Zoxide
 eval "$(zoxide init --cmd cd zsh)"
+
+# History substring binding
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

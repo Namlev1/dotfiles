@@ -116,14 +116,14 @@ exec hypridle
 # Workspaces:
 #
     workspace 1 output HDMI-A-1
-    workspace 2 output HDMI-A-1
     workspace 3 output HDMI-A-1
-    workspace 4 output HDMI-A-1
     workspace 5 output HDMI-A-1
+    workspace 7 output HDMI-A-1
+    workspace 9 output HDMI-A-1
+    workspace 2 output eDP-1
+    workspace 4 output eDP-1
     workspace 6 output eDP-1
-    workspace 7 output eDP-1
     workspace 8 output eDP-1
-    workspace 9 output eDP-1
     workspace 10 output eDP-1
     # Switch to workspace
     bindsym $mod+1 workspace number 1
@@ -238,7 +238,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 gaps inner 10
 default_border pixel 4
 
-exec swaybg -i ~/Pictures/wallpapers/w1.jpg
+exec swaybg -i ~/Pictures/wallpapers/w2.jpg
 
 # media buttons
 bindsym xf86audioraisevolume exec pamixer -i 5
