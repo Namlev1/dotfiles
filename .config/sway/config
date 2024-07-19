@@ -252,3 +252,10 @@ bindsym $mod+Shift+o exec hyprshot -m region --clipboard-only
 
 # refresh waybar
 bindsym $mod+x exec ~/scripts/launch.sh
+
+# RULES
+for_window [class="jetbrains-idea"] fullscreen enable
+assign [class="jetbrains-idea"] 3
+for_window [class="obsidian"] fullscreen enable
+assign [class="obsidian"] 4
+assign [class="WebCord"] 6
