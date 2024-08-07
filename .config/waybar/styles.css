@@ -59,6 +59,10 @@ button:hover {
   margin: 0px 10px;
 }
 
+#tray_batt{
+  margin-right: 0px;
+}
+
 #window,
 #workspaces {
     margin: 0 4px;
@@ -101,4 +105,5 @@ button:hover {
 #battery{
   color: #B6C8C4;
   margin-left: 10px;
+  margin-right: 10px;
 }
