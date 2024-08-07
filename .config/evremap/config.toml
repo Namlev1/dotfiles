@@ -1,0 +1,9 @@
+device_name = "AT Translated Set 2 keyboard"
+
+[[remap]]
+input = ["KEY_LEFTCTRL","KEY_LEFTSHIFT", "KEY_L"]
+output = ["KEY_UP"]
+
+[[remap]]
+input = ["KEY_LEFTCTRL", "KEY_L"]
+output = ["KEY_DOWN"]
