@@ -232,9 +232,10 @@ exec_always ~/scripts/launch.sh
 exec mega-sync
 exec nm-applet &
 exec blueman-applet &
-exec layman
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec sudo evremap remap ~/.config/evremap/config.toml
 
+smart_borders on
 gaps inner 10
 default_border pixel 4
 
@@ -254,7 +255,6 @@ bindsym $mod+Shift+o exec hyprshot -m region --clipboard-only
 bindsym $mod+x exec ~/scripts/launch.sh
 
 # RULES
-for_window [class="jetbrains-idea"] fullscreen enable
 assign [class="jetbrains-idea"] 3
 for_window [class="obsidian"] fullscreen enable
 assign [class="obsidian"] 4
