@@ -1,0 +1,11 @@
+[Script Info]
+Title: Subtitle 8
+ScriptType: v4.00+
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,10,&H00FFFFFF,&H000000FF,&H80000000,&H60FFFFFF,0,0,0,0,100,100,0,0,3,1,0,2,10,10,20,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:10.00,Default,,0,0,0,,"Podobny bądź do skały, o którą się ciągle fale rozbijają. A ona stoi, a koło niej usypiają bałwany wody. O ja nieszczęśliwy, że mnie to spotkało - Ależ nie tak! Lecz: O ja szczęśliwy, że chociaż mnie to spotkażo, żyję bez smutku, nie gnębi mnie teraźniejszość ani nie boję się przyszłości. To bowiem każdemu przydarzyć się mogło, a nie każdy potrafiłby żyć z tym bez smutku."

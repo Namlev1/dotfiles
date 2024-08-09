@@ -6,6 +6,7 @@ blueman
 brightnessctl
 checkupdates-with-aur
 dunst
+ffmpeg
 git
 gnome-text-editor
 gparted

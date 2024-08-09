@@ -234,12 +234,11 @@ exec nm-applet &
 exec blueman-applet &
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec sudo evremap remap ~/.config/evremap/config.toml
+exec swaybg -i ~/Pictures/wallpapers/subtitles.jpg
 
 smart_borders on
 gaps inner 10
 default_border pixel 4
-
-exec swaybg -i ~/Pictures/wallpapers/w2.jpg
 
 # media buttons
 bindsym xf86audioraisevolume exec pamixer -i 5
@@ -256,6 +255,5 @@ bindsym $mod+x exec ~/scripts/launch.sh
 
 # RULES
 assign [class="jetbrains-idea"] 3
-for_window [class="obsidian"] fullscreen enable
 assign [class="obsidian"] 4
 assign [class="WebCord"] 6
