@@ -20,5 +20,4 @@ INPUT_IMAGE="/home/namlev/Pictures/wallpapers/wallpaper.jpg"
 OUTPUT_IMAGE="/home/namlev/Pictures/wallpapers/subtitles.jpg"
 
 # Execute the add_text_to_image.sh script with the selected .ass file
-add_text_to_image.sh "$INPUT_IMAGE" "$OUTPUT_IMAGE" "$RANDOM_QUOTE_FILE"
-
+/home/namlev/scripts/add_text_to_image.sh "$INPUT_IMAGE" "$OUTPUT_IMAGE" "$RANDOM_QUOTE_FILE"

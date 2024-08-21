@@ -233,7 +233,9 @@ exec mega-sync
 exec nm-applet &
 exec blueman-applet &
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec sudo evremap remap ~/.config/evremap/config.toml
+exec sudo evremap remap ~/.config/evremap/laptop_keyboard.toml
+exec sudo evremap remap ~/.config/evremap/pc_keyboard.toml
+exec /home/namlev/scripts/add_random_quote_to_wall.sh
 exec swaybg -i ~/Pictures/wallpapers/subtitles.jpg
 
 smart_borders on
