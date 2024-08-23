@@ -19,7 +19,7 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
-set $browser vivaldi
+set $browser brave
 set $fileManager thunar
 
 ### Output configuration
@@ -237,6 +237,7 @@ exec sudo evremap remap ~/.config/evremap/laptop_keyboard.toml
 exec sudo evremap remap ~/.config/evremap/pc_keyboard.toml
 exec /home/namlev/scripts/add_random_quote_to_wall.sh
 exec swaybg -i ~/Pictures/wallpapers/subtitles.jpg
+exec chat-gpt
 
 smart_borders on
 gaps inner 10
@@ -259,3 +260,4 @@ bindsym $mod+x exec ~/scripts/launch.sh
 assign [class="jetbrains-idea"] 3
 assign [class="obsidian"] 4
 assign [class="WebCord"] 6
+for_window [app_id="chat-gpt"] move scratchpad, resize set 840 810
