@@ -258,6 +258,7 @@ bindsym $mod+x exec ~/scripts/launch.sh
 
 # RULES
 assign [class="jetbrains-idea"] 3
+assign [class="jetbrains-rider"] 3
 assign [class="obsidian"] 4
 assign [class="WebCord"] 6
 for_window [app_id="chat-gpt"] move scratchpad, resize set 840 810

@@ -4,6 +4,7 @@ alsa-utilt
 auto-cpufreq
 blueman
 brightnessctl
+chatgpt-desktop-bin
 checkupdates-with-aur
 dunst
 ffmpeg
