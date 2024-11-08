@@ -44,6 +44,7 @@ alias l='ls --color'
 alias la='ls -la --color'
 alias v='nvim'
 alias c='clear'
+alias vpn='/opt/cisco/anyconnect/bin/vpnui'
 
 # Zoxide
 eval "$(zoxide init --cmd cd zsh)"
