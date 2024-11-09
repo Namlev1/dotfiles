@@ -7,3 +7,19 @@ output = ["KEY_UP"]
 [[remap]]
 input = ["KEY_LEFTCTRL", "KEY_L"]
 output = ["KEY_DOWN"]
+
+[[remap]]
+input = ["KEY_LEFTCTRL", "KEY_C"]
+output = ["KEY_LEFTCTRL", "KEY_I"]
+
+[[remap]]
+input = ["KEY_LEFTCTRL", "KEY_LEFTSHIFT", "KEY_C"]
+output = ["KEY_LEFTCTRL", "KEY_LEFTSHIFT", "KEY_I"]
+
+[[remap]]
+input = ["KEY_LEFTCTRL", "KEY_V"]
+output = ["KEY_LEFTCTRL", "KEY_DOT"]
+
+[[remap]]
+input = ["KEY_LEFTCTRL", "KEY_LEFTSHIFT", "KEY_V"]
+output = ["KEY_LEFTCTRL", "KEY_LEFTSHIFT", "KEY_DOT"]
