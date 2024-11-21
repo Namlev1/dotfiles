@@ -53,5 +53,8 @@ eval "$(zoxide init --cmd cd zsh)"
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+# NVim as man page reader
+export MANPAGER='nvim +Man!'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
