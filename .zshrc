@@ -11,6 +11,15 @@ export PATH=$PATH:/home/namlev/scripts
 
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
+# keybindings
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+bindkey "^[[3~" delete-char
+bindkey "^[[3;5~" delete-word
+bindkey "^H" backward-char
+bindkey "^L" forward-char
+
+
 # Plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
