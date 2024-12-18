@@ -1,3 +1,8 @@
+[keyboard]
+bindings = [
+{ key = "Space", mods = "Control", action = "ToggleViMode" },
+]
+
 
 [font]
 size = 15
@@ -13,8 +18,5 @@ x = 5
 y = 5
 
 [general]
-#import = ["~/.config/alacritty/themes/themes/doom_one.toml"]
-#import = ["~/.config/alacritty/themes/themes/everforest_dark.toml"]
-#import = ["~/.config/alacritty/themes/themes/monokai_pro.toml"]
-# import = ["~/.config/alacritty/themes/themes/onenord.toml"]
-import = ["~/.config/alacritty/themes/themes/tokyo-night.toml"]
+# import = ["~/.config/alacritty/themes/themes/tokyo-night.toml"]
+import = ["~/.config/alacritty/themes/themes/gruvbox_material_medium_dark.toml"]
