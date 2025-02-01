@@ -3,20 +3,22 @@ bindings = [
 { key = "Space", mods = "Control", action = "ToggleViMode" },
 ]
 
-
 [font]
-size = 15
+size = 11
 
 [font.normal]
 family = "JetBrains Mono NF"
 
 [window]
 decorations = "none"
+opacity = 0.98
+
+[colors]
+transparent_background_colors = true
 
 [window.padding]
 x = 5
 y = 5
 
 [general]
-# import = ["~/.config/alacritty/themes/themes/tokyo-night.toml"]
-import = ["~/.config/alacritty/themes/themes/gruvbox_material_medium_dark.toml"]
+import = ["~/.config/alacritty/themes/themes/gruvbox_material_hard_dark.toml"]

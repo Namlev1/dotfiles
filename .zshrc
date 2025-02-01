@@ -12,12 +12,12 @@ export PATH=$PATH:/home/namlev/scripts
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # keybindings
-bindkey "^[[H" beginning-of-line
-bindkey "^[[F" end-of-line
-bindkey "^[[3~" delete-char
-bindkey "^[[3;5~" delete-word
-bindkey "^H" backward-char
-bindkey "^L" forward-char
+# bindkey "^[[H" beginning-of-line
+# bindkey "^[[F" end-of-line
+# bindkey "^[[3~" delete-char
+# bindkey "^[[3;5~" delete-word
+# bindkey "^H" backward-char
+# bindkey "^L" forward-char
 
 
 # Plugins
@@ -64,6 +64,9 @@ bindkey '^[[B' history-substring-search-down
 
 # NVim as man page reader
 export MANPAGER='nvim +Man!'
+
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
+export PATH=$JAVA_HOME/bin:$PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
