@@ -70,6 +70,12 @@ def extract_cambridge_data(url):
     def_elem = soup.select_one('.def.ddef_d.db')
     definition = def_elem.text.strip() if def_elem else "Definition not found"
     
+    # Extract the first example sentence for Personal Connection field
+    example_elem = soup.select_one('.examp.dexamp')
+    example = ""
+    if example_elem:
+        example = example_elem.text.strip()
+    
     # Find the audio URL - based on the HTML structure you shared
     audio_url = None
     base_url = "https://dictionary.cambridge.org"
@@ -116,6 +122,7 @@ def extract_cambridge_data(url):
         'word': word,
         'ipa': ipa,
         'explanation': definition,
+        'example': example,
         'audio_url': audio_url,
         'base_url': base_url
     }
@@ -223,7 +230,7 @@ def add_to_anki(data, audio_path):
         if not result:
             print("Warning: Failed to store audio file in Anki")
     
-    # Create note
+    # Create note with example sentence in Personal Connection field
     note = {
         "deckName": DECK_NAME,
         "modelName": MODEL_NAME,
@@ -231,7 +238,7 @@ def add_to_anki(data, audio_path):
             "Word": data["word"],
             "IPA": data["ipa"],
             "Explanation": data["explanation"],
-            "Personal Connection": "",  # Left blank for user to fill in
+            "Personal Connection": data.get("example", ""),  # Use example sentence or empty string
             "Pronunciation": f"[sound:{filename}]" if filename else ""
         },
         "options": {
@@ -284,6 +291,7 @@ def main():
     print(f"Word: {data['word']}")
     print(f"IPA: {data['ipa']}")
     print(f"Explanation: {data['explanation']}")
+    print(f"Example: {data.get('example', 'Not found')}")
     print(f"Audio: {'Found' if audio_path else 'Not found'}")
     
     # Add to Anki
