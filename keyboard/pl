@@ -168,6 +168,10 @@ xkb_symbols "dvorak" {
     key <AD02> { [	    comma,	bracketLeft,	oslash,	Oslash		]	};
     key <AD03> { [	    period,	bracketRight,	ae,	AE	] };
 
+    // Spanish
+    key <AD04> { [	    p,	P,	ntilde,	Ntilde	] };
+    key <AC07> { [	    h,	H,      dead_acute, dead_acute		]	};
+
 
     include "kpdl(comma)"
 
