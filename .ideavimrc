@@ -1,0 +1,40 @@
+let mapleader=" "
+
+set scrolloff=10
+set clipboard+=unnamedplus
+set incsearch
+set relativenumber
+
+" which-key
+set which-key
+set notimeout
+let g:WhichKey_DefaultDelay = 1000
+" TODO add labels
+
+" Mappings
+
+:map <C-w> <Action>(CloseContent)
+nnoremap <Tab> :action NextTab<CR>
+nnoremap <S-Tab> :action PreviousTab<CR>
+
+" Custom delete without copying to clipboard
+nnoremap d "_d
+vnoremap d "_d
+" Custom change without copying to clipboard
+nnoremap c "_c
+vnoremap c "_c
+" Leader + d for regular delete (with copying to clipboard)
+nnoremap <leader>d d
+vnoremap <leader>d d
+" Leader + c for regular change (with copying to clipboard)
+nnoremap <leader>c c
+vnoremap <leader>c c
+
+map <leader>vv <Action>(SplitVertically)
+map <leader>vh <Action>(SplitHorizontally)
+
+
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+Plug 'vim-multiple-cursors'
+Plug 'tpope/vim-surround'
